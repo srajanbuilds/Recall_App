@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Header Icon -->
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="32dp"
+            android:src="@mipmap/recall"
+            android:contentDescription="Recall" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Set Up Recall AI"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?android:textColorPrimary" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Recall needs AI models to work offline.\nAll data stays on your device — always."
+            android:textSize="14sp"
+            android:textColor="?android:textColorSecondary"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp" />
+
+        <!-- ============================================ -->
+        <!-- Step 1: Embedding Model (auto-download)      -->
+        <!-- ============================================ -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardEmbedding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="?attr/colorControlNormal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Step 1 — Semantic Search Engine"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="?android:textColorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="A small model (~23 MB) that understands the meaning of your notes so you can search by idea, not just keywords."
+                    android:textSize="13sp"
+                    android:textColor="?android:textColorSecondary"
+                    android:lineSpacingExtra="2dp" />
+
+                <ProgressBar
+                    android:id="@+id/progressEmbedding"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/statusEmbedding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Waiting…"
+                    android:textSize="12sp"
+                    android:textColor="?attr/colorPrimary" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ============================================ -->
+        <!-- Step 2: LLM Model (auto-download)    -->
+        <!-- ============================================ -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardLlm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="?attr/colorControlNormal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Step 2 — On-Device AI Brain"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="?android:textColorPrimary" />
+
+                <TextView
+                    android:id="@+id/llmDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Google's Gemma language model lets you chat with your notes. It runs entirely on your phone."
+                    android:textSize="13sp"
+                    android:textColor="?android:textColorSecondary"
+                    android:lineSpacingExtra="2dp" />
+
+                <ProgressBar
+                    android:id="@+id/progressLlm"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/statusLlm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Waiting…"
+                    android:textSize="12sp"
+                    android:textColor="?attr/colorPrimary" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ============================================ -->
+        <!-- Step 3: Privacy (shown after both complete)  -->
+        <!-- ============================================ -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPrivacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#1A3B82F6"
+            app:strokeWidth="1dp"
+            app:strokeColor="?attr/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔒  Go Fully Offline (Optional)"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="?android:textColorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="All AI models are now on your device! For maximum privacy, you can revoke Recall's internet permission:\n\n1. Long-press the Recall app icon\n2. Tap 'App Info'\n3. Go to 'Permissions'\n4. Disable 'Network' or 'Internet'\n\nRecall will work perfectly — it never needs the internet again."
+                    android:textSize="13sp"
+                    android:textColor="?android:textColorSecondary"
+                    android:lineSpacingExtra="3dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Primary action button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStartDownload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Download Models"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:padding="14dp" />
+
+        <!-- Done button (hidden until both complete) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Start Using Recall AI ✨"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:padding="14dp"
+            android:visibility="gone" />
+
+        <!-- Skip -->
+        <TextView
+            android:id="@+id/btnSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="32dp"
+            android:text="Skip for now"
+            android:textSize="14sp"
+            android:textColor="?android:textColorSecondary"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?selectableItemBackground" />
+
+    </LinearLayout>
+</ScrollView>

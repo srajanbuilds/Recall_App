@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Blue50">#1E293B</color>
+    <color name="Indigo100">#334155</color>
+
+    <color name="LightBlue500">#3B82F6</color>
+    <color name="LightBlue100">#60A5FA</color>
+
+    <color name="Black">#0F172A</color>
+    <color name="Transparent">#00000000</color>
+
+    <color name="Grey100">#1E293B</color>
+
+    <color name="Default">#0F172A</color>
+    <color name="Coral">#7F1D1D</color>
+    <color name="Orange">#78350F</color>
+    <color name="Sand">#713F12</color>
+    <color name="Storm">#1E3A8A</color>
+    <color name="Fog">#312E81</color>
+    <color name="Sage">#064E3B</color>
+    <color name="Mint">#14532D</color>
+    <color name="Dusk">#4C1D95</color>
+    <color name="Flower">#831843</color>
+    <color name="Blossom">#701A75</color>
+    <color name="Clay">#451A03</color>
+</resources>
