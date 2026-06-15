@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Recall AI Notes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0d10; --surface: #18181f; --border: #2a2a38;
+      --accent: #8b5cf6; --text: #f1f1f1; --muted: #9191a4;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.75; }
+    header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 20px 0; position: sticky; top: 0; z-index: 10; }
+    header .inner { max-width: 760px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 12px; }
+    .logo { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, #8b5cf6, #6d28d9); display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; color: white; }
+    header h1 { font-size: 18px; font-weight: 600; }
+    nav { max-width: 760px; margin: 0 auto; padding: 16px 24px; display: flex; gap: 8px; flex-wrap: wrap; }
+    nav a { padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; text-decoration: none; color: var(--muted); border: 1px solid var(--border); transition: all 0.2s; }
+    nav a:hover, nav a.active { color: white; border-color: var(--accent); background: rgba(139,92,246,0.1); }
+    main { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
+    .badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3); color: #c4b5fd; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; margin-bottom: 24px; }
+    h2 { font-size: 30px; font-weight: 700; margin-bottom: 8px; }
+    .meta { color: var(--muted); font-size: 14px; margin-bottom: 40px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; margin-bottom: 20px; }
+    .card h3 { font-size: 17px; font-weight: 600; color: #c4b5fd; margin-bottom: 14px; }
+    .card p { color: var(--muted); font-size: 15px; margin-bottom: 10px; }
+    .card p:last-child { margin-bottom: 0; }
+    .card ul { color: var(--muted); font-size: 15px; padding-left: 20px; }
+    .card ul li { margin-bottom: 6px; }
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; color: var(--muted); font-size: 13px; max-width: 760px; margin: 0 auto; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="inner">
+      <div class="logo">R</div>
+      <h1>Recall AI Notes</h1>
+    </div>
+  </header>
+  <nav>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html" class="active">Terms of Service</a>
+    <a href="index.html">Home</a>
+  </nav>
+  <main>
+    <div class="badge">📜 Terms</div>
+    <h2>Terms of Service</h2>
+    <p class="meta">Last updated: May 3, 2026 &nbsp;·&nbsp; Effective immediately</p>
+
+    <div class="card">
+      <h3>1. Acceptance of Terms</h3>
+      <p>By downloading or using the Recall AI Notes app ("App"), you agree to be bound by these Terms of Service. If you do not agree, please do not use the App.</p>
+    </div>
+
+    <div class="card">
+      <h3>2. Description of Service</h3>
+      <p>Recall is a local, offline AI-powered notes application for Android. The App provides:</p>
+      <ul>
+        <li>Note creation, editing, and storage on your device</li>
+        <li>On-device full-text search</li>
+        <li>On-device AI question-answering powered by locally downloaded language models</li>
+      </ul>
+      <p>All features run exclusively on your device. We provide no cloud storage or synchronization service.</p>
+    </div>
+
+    <div class="card">
+      <h3>3. License</h3>
+      <p>We grant you a personal, non-exclusive, non-transferable, revocable license to use the App for your personal, non-commercial purposes.</p>
+      <p>You may not: reverse engineer the App (except to the extent permitted by law), sublicense or sell the App, use the App for any illegal purpose.</p>
+    </div>
+
+    <div class="card">
+      <h3>4. User Content</h3>
+      <p>You own all notes and content you create in Recall. We never access, transmit, or store your content on any server. Because all data is stored locally on your device, we cannot recover lost data. You are responsible for backing up your device.</p>
+    </div>
+
+    <div class="card">
+      <h3>5. AI Model Download</h3>
+      <p>The AI question-answering feature requires a one-time download of a large language model file (~1.5 GB). By initiating this download, you agree to consume data on your network connection. We recommend using Wi-Fi. We are not responsible for any data charges incurred.</p>
+      <p>The AI models used (Gemma 2B, MiniLM) are provided under their respective open-source licenses (Apache 2.0) and are downloaded directly from their official repositories.</p>
+    </div>
+
+    <div class="card">
+      <h3>6. Disclaimer of Warranties</h3>
+      <p>THE APP IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND. WE DO NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF HARMFUL COMPONENTS.</p>
+      <p>AI-generated responses from the on-device model may be inaccurate, incomplete, or misleading. Do not rely on AI responses for medical, legal, financial, or other critical decisions.</p>
+    </div>
+
+    <div class="card">
+      <h3>7. Limitation of Liability</h3>
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOSS OF DATA, ARISING FROM YOUR USE OF THE APP.</p>
+    </div>
+
+    <div class="card">
+      <h3>8. Changes to Terms</h3>
+      <p>We may update these Terms at any time. Continued use of the App after changes constitutes your acceptance of the new Terms. We will update the "Last updated" date when changes are made.</p>
+    </div>
+
+    <div class="card">
+      <h3>9. Governing Law</h3>
+      <p>These Terms are governed by the laws of India. Any disputes shall be resolved in the courts of India.</p>
+    </div>
+
+    <div class="card">
+      <h3>10. Contact</h3>
+      <p>For questions about these Terms: <a href="mailto:support@recallapp.in">support@recallapp.in</a></p>
+    </div>
+  </main>
+  <footer>
+    <p>© 2026 Recall AI Notes. Built with ❤️ and zero tracking.</p>
+  </footer>
+</body>
+</html>
